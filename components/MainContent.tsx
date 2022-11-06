@@ -1,14 +1,28 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-type Props = {};
+type Props = {
+  name: string;
+};
 
-const MainContent = (props: Props) => {
+const MainContent = ({ name }: { name: string }) => {
   return (
-    <div className="h-[92vh] flex justify-around items-center px-10">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1.5,
+      }}
+      className="h-[92vh] flex justify-around items-center px-10"
+    >
       <div className="flex flex-col gap-10">
-        <span className="text-5xl font-bold">Hi, name is </span>
-        <span className="text-5xl font-bold">Tomislav</span>
+        <h1 className="text-5xl font-bold">{name} batina </h1>
+        <h1 className="text-5xl font-bold">Mase Automatima</h1>
       </div>
       <div className="h-32 w-32 md:w-48 md:h-48 lg:h-80 lg:w-80">
         <Image
@@ -17,10 +31,10 @@ const MainContent = (props: Props) => {
           alt="hero"
           width={300}
           height={300}
-          layout="contain"
+          priority
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

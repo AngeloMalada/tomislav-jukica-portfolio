@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { transform } from "typescript";
 
-export default function App() {
+export default function Cursor() {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   const [globalCoords, setGlobalCoords] = useState({ x: 0, y: 0 });
@@ -14,7 +13,6 @@ export default function App() {
         x: event.screenX,
         y: event.screenY,
       });
-      console.log(globalCoords);
     };
     window.addEventListener("mousemove", handleWindowMouseMove);
 
@@ -31,30 +29,30 @@ export default function App() {
   };
 
   return (
-    <div>
-      {/* 👇️ Get mouse coordinates relative to element */}
-      <div
-        onMouseMove={handleMouseMove}
-        style={{
-          padding: "3rem",
-          backgroundColor: "pink",
-          position: "fixed",
-          top: `${coords.y}px`,
-          left: `${coords.x}px`,
-          transform: `translateX(${globalCoords.x - 50}px) translateY(${
-            globalCoords.y - 170
-          }px)`,
-          width: "100px",
-          height: "100px",
-          borderRadius: "50%",
-          zIndex: "-20",
-        }}
-      ></div>
+    <div
+      onMouseMove={handleMouseMove}
+      style={{
+        padding: "3rem",
+        backgroundColor: "rgba( 255, 255, 255, 0.25 )",
 
-      <hr />
-      <h2>
-        Global coords: {globalCoords.x} {globalCoords.y}
-      </h2>
+        position: "fixed",
+        top: 0,
+        left: 0,
+        transform: `translateX(${globalCoords.x - 50}px) translateY(${
+          globalCoords.y - 170
+        }px)`,
+        width: "30px",
+        height: "30px",
+        borderRadius: "50%",
+
+        backdropFilter: "blur(2px)",
+        WebkitBackdropFilter: "blur(2px)",
+        border: "1px solid rgba(255, 255, 255, 0.18)",
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
+        pointerEvents: "none",
+      }}
+    >
+      <br />
     </div>
   );
 }

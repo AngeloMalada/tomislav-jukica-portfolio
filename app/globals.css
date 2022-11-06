@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2560' height='1440' preserveAspectRatio='none' viewBox='0 0 2560 1440'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1105%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c438 C 170.8%2c384.2 512.4%2c168.4 854%2c169 C 1195.6%2c169.6 1366.8%2c453 1708%2c441 C 2049.2%2c429 2389.6%2c175.4 2560%2c109L2560 1440L0 1440z' fill='rgba(200%2c 19%2c 82%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c907 C 170.8%2c1000.4 512.4%2c1383.4 854%2c1374 C 1195.6%2c1364.6 1366.8%2c846.8 1708%2c860 C 2049.2%2c873.2 2389.6%2c1324 2560%2c1440L2560 1440L0 1440z' fill='rgba(228%2c 82%2c 201%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1105'%3e%3crect width='2560' height='1440' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
-} */
+body {
+  cursor: none;
+}
