@@ -1,11 +1,24 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 const SingleProject = (props: Props) => {
   return (
-    <div className="flex flex-col gap-10 w-[80%] min-h-[80%] bg-gray-50 rounded-3xl m-auto font-bold uppercase text-center p-10 text-3xl">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1.5,
+      }}
+      className="flex flex-col gap-10 w-[80%] min-h-[80%] bg-gray-50 rounded-3xl m-auto font-bold uppercase text-center p-10 text-3xl hover:shadow-md hover:bg-white  transition-shadow hover:ease-in-out hover:duration-300"
+    >
       <h1>Single Project</h1>
       <Image
         className="w-[25%] h-[40%] rounded-3xl mx-auto"
@@ -30,7 +43,7 @@ const SingleProject = (props: Props) => {
       </p>
 
       <h1>Download</h1>
-    </div>
+    </motion.div>
   );
 };
 

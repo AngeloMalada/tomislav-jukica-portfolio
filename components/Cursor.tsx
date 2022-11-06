@@ -2,16 +2,14 @@
 import { useEffect, useState } from "react";
 
 export default function Cursor() {
-  const [coords, setCoords] = useState({ x: 0, y: 0 });
-
   const [globalCoords, setGlobalCoords] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     // 👇️ get global mouse coordinates
     const handleWindowMouseMove = (event: any) => {
       setGlobalCoords({
-        x: event.screenX,
-        y: event.screenY,
+        x: event.clientX,
+        y: event.clientY,
       });
     };
     window.addEventListener("mousemove", handleWindowMouseMove);
@@ -21,29 +19,20 @@ export default function Cursor() {
     };
   }, [globalCoords]);
 
-  const handleMouseMove = (event: any) => {
-    setCoords({
-      x: event.clientX - event.target.offsetLeft,
-      y: event.clientY - event.target.offsetTop,
-    });
-  };
-
   return (
     <div
-      className="hidden lg:block"
-      onMouseMove={handleMouseMove}
+      className="hidden  lg:block"
       style={{
-        padding: "3rem",
         backgroundColor: "rgba( 255, 255, 255, 0.25 )",
 
         position: "fixed",
         top: 0,
         left: 0,
-        transform: `translateX(${globalCoords.x - 50}px) translateY(${
-          globalCoords.y - 170
+        transform: `translateX(${globalCoords.x - 25}px) translateY(${
+          globalCoords.y - 25
         }px)`,
-        width: "30px",
-        height: "30px",
+        width: "50px",
+        height: "50px",
         borderRadius: "50%",
 
         backdropFilter: "blur(2px)",
