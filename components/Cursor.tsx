@@ -30,6 +30,7 @@ export default function Cursor() {
 
   return (
     <div
+      className="hidden lg:block"
       onMouseMove={handleMouseMove}
       style={{
         padding: "3rem",
