@@ -5,8 +5,8 @@ import "./globals.css";
 
 const HomePage = () => {
   return (
-    <div className="h-[5000px]">
-      <MainContent name="stole" />
+    <div className="">
+      <MainContent name="Stole" />
     </div>
   );
 };

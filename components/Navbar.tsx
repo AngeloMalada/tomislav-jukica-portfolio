@@ -12,8 +12,12 @@ const Navbar = (props: Props) => {
       <Link href="/projects">
         <h1>Projects</h1>
       </Link>
-      <h1>About</h1>
-      <h1>Contact</h1>
+      <Link href="/about">
+        <h1>About</h1>
+      </Link>
+      <Link href="/contact">
+        <h1>Contact</h1>
+      </Link>
     </div>
   );
 };
