@@ -5,7 +5,7 @@ type Props = {};
 const Contact = (props: Props) => {
   return (
     <div className="mt-28 h-[100vh]">
-      <form className="flex flex-col justify-center items-center gap-5 bg-gray-50 p-10 w-[60%] m-auto ">
+      <form className="flex flex-col justify-center items-center gap-5 bg-gray-50 p-10 w-[60%] m-auto rounded-3xl">
         <label htmlFor="name">Name</label>
         <input className="w-[60%] h-10" type="text" name="name" id="name" />
         <label htmlFor="email">Email</label>
