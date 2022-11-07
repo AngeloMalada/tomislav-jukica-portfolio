@@ -1,8 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function Cursor() {
   const [globalCoords, setGlobalCoords] = useState({ x: 0, y: 0 });
+  //get cursorSlice state from redux store
+  const cursor = useSelector((state: any) => state.cursor);
 
   useEffect(() => {
     // 👇️ get global mouse coordinates
@@ -11,6 +14,7 @@ export default function Cursor() {
         x: event.clientX,
         y: event.clientY,
       });
+      console.log(cursor);
     };
     window.addEventListener("mousemove", handleWindowMouseMove);
 
@@ -21,20 +25,19 @@ export default function Cursor() {
 
   return (
     <div
-      className="hidden  lg:block"
+      className="hidden  lg:block z-50"
       style={{
-        backgroundColor: "rgba( 255, 255, 255, 0.25 )",
-
+        backgroundColor: cursor.backgroundColor,
+        mixBlendMode: cursor.blend,
         position: "fixed",
         top: 0,
         left: 0,
-        transform: `translateX(${globalCoords.x - 25}px) translateY(${
-          globalCoords.y - 25
-        }px)`,
-        width: "50px",
-        height: "50px",
+        transform: `translateX(${
+          globalCoords.x - cursor.halfWidth
+        }px) translateY(${globalCoords.y - cursor.halfWidth}px)`,
+        width: cursor.width,
+        height: cursor.height,
         borderRadius: "50%",
-
         backdropFilter: "blur(2px)",
         WebkitBackdropFilter: "blur(2px)",
         border: "1px solid rgba(255, 255, 255, 0.18)",

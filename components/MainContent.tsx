@@ -1,12 +1,22 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { hovered, unhovered } from "../redux/cursorSlice";
 
 type Props = {
   name: string;
 };
 
 const MainContent = ({ name }: { name: string }) => {
+  const dispatch = useDispatch();
+  const mouseEnter = () => {
+    dispatch(hovered());
+  };
+  const mouseLeave = () => {
+    dispatch(unhovered());
+  };
   return (
     <motion.div
       initial={{
@@ -18,13 +28,25 @@ const MainContent = ({ name }: { name: string }) => {
       transition={{
         duration: 1.5,
       }}
-      className="h-[92vh] flex justify-around items-center px-10"
+      className="h-[92vh] mt-[8vh] flex justify-around items-center text-center px-10 select-none"
     >
-      <div className="flex flex-col gap-10">
-        <h1 className="text-5xl font-bold">{name} batina </h1>
-        <h1 className="text-5xl font-bold">Mase Automatima</h1>
+      <div className="flex flex-col gap-10 ">
+        <h1
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseLeave}
+          className=" text-9xl font-bold  "
+        >
+          {name} batina{" "}
+        </h1>
+        <h1
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseLeave}
+          className="text-9xl font-bold  "
+        >
+          Mase Automatima
+        </h1>
       </div>
-      <div className="h-32 w-32 md:w-48 md:h-48 lg:h-80 lg:w-80">
+      {/* <div className="h-32 w-32 md:w-48 md:h-48 lg:h-80 lg:w-80">
         <Image
           className="rounded-full"
           src="/picture.jpeg"
@@ -33,7 +55,7 @@ const MainContent = ({ name }: { name: string }) => {
           height={300}
           priority
         />
-      </div>
+      </div> */}
     </motion.div>
   );
 };
