@@ -5,7 +5,7 @@ type Props = {};
 
 const Project = (props: Props) => {
   return (
-    <div className="mt-10">
+    <div className="mt-[8vh] text-gray-500">
       <SingleProject />
     </div>
   );

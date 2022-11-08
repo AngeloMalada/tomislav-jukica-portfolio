@@ -11,7 +11,7 @@ const cursorSlice = createSlice({
   },
   reducers: {
     hovered: (state) => {
-      state.backgroundColor = "rgba( 212, 28, 28, 1 )";
+      state.backgroundColor = "rgba( 250, 240, 0, 1 )";
       state.width = "100px";
       state.height = "100px";
       state.halfWidth = 50;

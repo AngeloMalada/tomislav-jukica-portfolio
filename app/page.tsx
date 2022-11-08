@@ -13,7 +13,7 @@ const HomePage = () => {
         <MainContent name="Stole" />
 
         <div className="fixed top-[8vh] h-[92vh] w-full z-[-20]">
-          <Canvas>
+          <Canvas camera={{ fov: 90, near: 1, far: 1000, position: [0, 2, 5] }}>
             <Three />
           </Canvas>
         </div>

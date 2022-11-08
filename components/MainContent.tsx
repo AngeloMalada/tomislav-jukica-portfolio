@@ -28,7 +28,7 @@ const MainContent = ({ name }: { name: string }) => {
       transition={{
         duration: 1.5,
       }}
-      className="h-[92vh] mt-[8vh] flex justify-around items-center text-center px-10 select-none"
+      className="h-[92vh] mt-[8vh] flex justify-around  items-end pb-10 text-center px-10 select-none uppercase font-bold"
     >
       <div className="flex flex-col gap-10 ">
         <h1
@@ -36,14 +36,14 @@ const MainContent = ({ name }: { name: string }) => {
           onMouseLeave={mouseLeave}
           className=" text-9xl font-bold  "
         >
-          {name} batina{" "}
+          Tomislav Jukica
         </h1>
         <h1
           onMouseEnter={mouseEnter}
           onMouseLeave={mouseLeave}
           className="text-9xl font-bold  "
         >
-          Mase Automatima
+          Game developer
         </h1>
       </div>
       {/* <div className="h-32 w-32 md:w-48 md:h-48 lg:h-80 lg:w-80">
