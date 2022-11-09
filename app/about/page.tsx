@@ -10,14 +10,17 @@ const About = (props: Props) => {
     <motion.div
       initial={{
         opacity: 0,
+        x: -1000,
       }}
       whileInView={{
         opacity: 1,
+        x: 0,
       }}
+      viewport={{ once: true }}
       transition={{
         duration: 1.5,
       }}
-      className="text-center uppercase font-bold  flex flex-col  text-m justify-center items-center gap-10 min-h-[92vh] mt-[8vh] w-[90%] lg:w-[60%] m-auto"
+      className="text-center uppercase font-bold  flex flex-col  text-m justify-center items-center gap-10  mt-[12vh] w-[90%] lg:w-[60%] "
     >
       <div className="flex flex-col justify-center gap-10 items-center py-6 w-full  bg-[#202020] min-h-60 rounded-3xl hover:shadow-md  hover:bg-[#252525] transition-shadow hover:ease-in-out hover:duration-300 text-center font-bold uppercase">
         <h1 className="text-3xl">ABOUT</h1>
@@ -35,10 +38,6 @@ const About = (props: Props) => {
           aspernatur, molestias sunt nesciunt perspiciatis iusto laborum
           pariatur cupiditate repellendus nostrum veniam, soluta assumenda
           perferendis nihil, maxime eos impedit iste dolor aut deserunt! Totam
-          tempore cumque natus excepturi at possimus iste quae voluptatibus enim
-          asperiores saepe dolor consequuntur quas, adipisci non, fugiat dicta
-          officiis deserunt voluptas! Perferendis at, aspernatur recusandae
-          deleniti ipsa ad natus quo quia nam ut molestias sed velit quibusdam
         </p>
       </div>
     </motion.div>
