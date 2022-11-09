@@ -5,7 +5,7 @@ type Props = {};
 
 const Project = (props: Props) => {
   return (
-    <div className="mt-24 text-gray-500">
+    <div className="mt-[8vh] h-[92vh] flex justify-center items-center text-gray-500">
       <SingleProject />
     </div>
   );

@@ -16,7 +16,7 @@ const Contact = (props: Props) => {
       transition={{
         duration: 1.5,
       }}
-      className="mt-28 h-[80vh]"
+      className="mt-28 h-[92vh] flex justify-center items-center"
     >
       <form className="flex flex-col justify-center items-center gap-5 bg-[#252525] p-10 w-[90%] md:w-[60%] m-auto rounded-3xl">
         <label htmlFor="name">Name</label>

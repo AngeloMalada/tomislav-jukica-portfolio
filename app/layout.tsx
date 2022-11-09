@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import "./globals.css";
 import { Provider } from "react-redux";
 import store from "../redux/store";
+import Footer from "../components/Footer";
 
 export default function RootLayout({
   children,
@@ -18,6 +19,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Cursor />
+          {/* <Footer /> */}
         </body>
       </html>
     </Provider>

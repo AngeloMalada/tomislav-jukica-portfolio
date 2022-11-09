@@ -18,7 +18,7 @@ const Slogan = ({ text }: Props) => {
     <h1
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
-      className=" text-5xl  lg:text-9xl  m-auto md:m-0 font-bold inline-block w-[max-content] "
+      className=" text-9xl  m-auto lg:m-0 font-bold inline-block w-[max-content] "
     >
       {text}
     </h1>

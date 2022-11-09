@@ -19,14 +19,14 @@ const MainContent = () => {
       }}
       className="h-[92vh] mt-[8vh] flex  justify-between items-center gap-44  select-none uppercase font-bold"
     >
-      <div className="flex flex-col gap-6 justify-center w-full md:ml-10 ">
+      <div className="flex flex-col gap-6 justify-center w-full ml-10 ">
         <Slogan text="tomislav" />
         <Slogan text="jukica" />
         <Slogan text="game" />
         <Slogan text="dev" />
       </div>
 
-      <div className="hidden md:inline-block  mr-10">
+      <div className="hidden lg:inline-block mr-10">
         <Image
           className="rounded-3xl "
           src="/picture.jpeg"
