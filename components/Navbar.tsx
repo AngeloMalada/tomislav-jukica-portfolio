@@ -55,16 +55,16 @@ const Navbar = (props: Props) => {
           className="flex flex-col bg-[#252525] gap-20 w-[35vw] h-[max-content] pb-20 z-10 justify-start pt-20 text-5xl  text-center rounded-2xl absolute right-[0px]"
         >
           <Link href="/" className="cursor-none">
-            <h1>Home</h1>
+            <h1 onClick={handleMenu}>Home</h1>
           </Link>
           <Link href="/projects" className="cursor-none">
-            <h1>Projects</h1>
+            <h1 onClick={handleMenu}>Projects</h1>
           </Link>
           <Link href="/about" className="cursor-none">
-            <h1>About</h1>
+            <h1 onClick={handleMenu}>About</h1>
           </Link>
           <Link href="/contact" className="cursor-none">
-            <h1>Contact</h1>
+            <h1 onClick={handleMenu}>Contact</h1>
           </Link>
         </motion.div>
       )}
