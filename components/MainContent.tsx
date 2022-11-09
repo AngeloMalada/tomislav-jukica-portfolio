@@ -2,21 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
-import { hovered, unhovered } from "../redux/cursorSlice";
 
-type Props = {
-  name: string;
-};
+import Slogan from "./Slogan";
 
-const MainContent = ({ name }: { name: string }) => {
-  const dispatch = useDispatch();
-  const mouseEnter = () => {
-    dispatch(hovered());
-  };
-  const mouseLeave = () => {
-    dispatch(unhovered());
-  };
+const MainContent = () => {
   return (
     <motion.div
       initial={{
@@ -28,34 +17,25 @@ const MainContent = ({ name }: { name: string }) => {
       transition={{
         duration: 1.5,
       }}
-      className="h-[92vh] mt-[8vh] flex justify-around  items-end pb-10 text-center px-10 select-none uppercase font-bold"
+      className="h-[92vh] mt-[8vh] flex  justify-between items-center gap-44  select-none uppercase font-bold"
     >
-      <div className="flex flex-col gap-10 ">
-        <h1
-          onMouseEnter={mouseEnter}
-          onMouseLeave={mouseLeave}
-          className=" text-9xl font-bold  "
-        >
-          Tomislav Jukica
-        </h1>
-        <h1
-          onMouseEnter={mouseEnter}
-          onMouseLeave={mouseLeave}
-          className="text-9xl font-bold  "
-        >
-          Game developer
-        </h1>
+      <div className="flex flex-col gap-6 justify-center w-full md:ml-10 ">
+        <Slogan text="tomislav" />
+        <Slogan text="jukica" />
+        <Slogan text="game" />
+        <Slogan text="dev" />
       </div>
-      {/* <div className="h-32 w-32 md:w-48 md:h-48 lg:h-80 lg:w-80">
+
+      <div className="hidden md:inline-block  mr-10">
         <Image
-          className="rounded-full"
+          className="rounded-3xl "
           src="/picture.jpeg"
           alt="hero"
-          width={300}
-          height={300}
+          width={500}
+          height={500}
           priority
         />
-      </div> */}
+      </div>
     </motion.div>
   );
 };

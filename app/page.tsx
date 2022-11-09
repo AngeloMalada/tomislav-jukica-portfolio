@@ -10,12 +10,12 @@ const HomePage = () => {
   return (
     <Provider store={store}>
       <div className="h-[92vh]  relative">
-        <MainContent name="Stole" />
+        <MainContent />
 
         <div className="fixed top-[8vh] h-[92vh] w-full z-[-20]">
-          <Canvas camera={{ fov: 90, near: 1, far: 1000, position: [0, 2, 5] }}>
+          {/* <Canvas camera={{ fov: 90, near: 1, far: 1000, position: [0, 2, 5] }}>
             <Three />
-          </Canvas>
+          </Canvas> */}
         </div>
       </div>
     </Provider>
