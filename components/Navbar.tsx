@@ -21,7 +21,7 @@ const Navbar = (props: Props) => {
           <AiFillGithub className="h-10 w-10" />
           <GoNote className="h-10 w-10" />
         </div>
-        <div className="hidden lg:flex gap-10 ">
+        <div className="hidden lg:flex gap-10 text-2xl ">
           <Link href="/" className="cursor-none">
             <h1>Home</h1>
           </Link>
@@ -42,15 +42,17 @@ const Navbar = (props: Props) => {
       {menu && (
         <motion.div
           initial={{
-            x: 200,
+            opacity: 0,
+            y: -100,
           }}
           animate={{
-            x: 0,
+            opacity: 1,
+            y: 0,
           }}
           transition={{
-            duration: 1,
+            duration: 0.3,
           }}
-          className="flex flex-col bg-red-500 w-[35vw] h-[100vh] z-10 justify-start pt-20 text-5xl gap-10 text-center rounded-2xl absolute right-0"
+          className="flex flex-col bg-[#252525] gap-20 w-[35vw] h-[max-content] pb-20 z-10 justify-start pt-20 text-5xl  text-center rounded-2xl absolute right-[0px]"
         >
           <Link href="/" className="cursor-none">
             <h1>Home</h1>
