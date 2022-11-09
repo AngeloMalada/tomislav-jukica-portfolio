@@ -9,7 +9,7 @@ const Contact = (props: Props) => {
     <motion.div
       initial={{
         opacity: 0,
-        x: 1000,
+        x: 500,
       }}
       whileInView={{
         opacity: 1,
@@ -17,9 +17,9 @@ const Contact = (props: Props) => {
       }}
       viewport={{ once: true }}
       transition={{
-        duration: 1.5,
+        duration: 1,
       }}
-      className="mt-[12vh]  w-[100%] flex justify-center items-center"
+      className="mt-[12vh]  w-[100%] flex justify-center items-center overflow-hidden\"
     >
       <form className="flex flex-col justify-center items-center gap-5 bg-[#252525] p-10 w-[90%] md:w-[60%]  rounded-3xl">
         <label htmlFor="name">Name</label>

@@ -38,7 +38,7 @@ const HomePage = () => {
         </div>
         <div
           id="about"
-          className="h-screen flex  flex-col justify-center items-center  relative"
+          className="h-screen flex  flex-col justify-center items-center  relative overflow-hidden"
         >
           <h1 className="text-center  text-5xl uppercase absolute top-[10vh] font-bold ">
             about
@@ -47,7 +47,7 @@ const HomePage = () => {
         </div>
         <div
           id="contact"
-          className="h-screen flex flex-col  justify-center items-center relative"
+          className="h-screen flex flex-col  justify-center items-center relative overflow-hidden"
         >
           <h1 className="text-center text-5xl uppercase absolute top-[10vh] font-bold ">
             contact

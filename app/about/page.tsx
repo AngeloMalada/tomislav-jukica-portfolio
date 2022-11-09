@@ -10,7 +10,7 @@ const About = (props: Props) => {
     <motion.div
       initial={{
         opacity: 0,
-        x: -1000,
+        x: -500,
       }}
       whileInView={{
         opacity: 1,
@@ -18,9 +18,9 @@ const About = (props: Props) => {
       }}
       viewport={{ once: true }}
       transition={{
-        duration: 1.5,
+        duration: 1,
       }}
-      className="text-center uppercase font-bold  flex flex-col  text-m justify-center items-center gap-10  mt-[12vh] w-[90%] lg:w-[60%] "
+      className="text-center uppercase font-bold  flex flex-col  text-m justify-center items-center gap-10  overflow-hidden mt-[12vh] w-[90%] lg:w-[60%] "
     >
       <div className="flex flex-col justify-center gap-10 items-center py-6 w-full  bg-[#202020] min-h-60 rounded-3xl hover:shadow-md  hover:bg-[#252525] transition-shadow hover:ease-in-out hover:duration-300 text-center font-bold uppercase">
         <h1 className="text-3xl">ABOUT</h1>
