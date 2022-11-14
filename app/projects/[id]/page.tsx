@@ -12,7 +12,10 @@ type Props = {
   params: {
     id: string;
   };
-  social: social[];
+};
+
+type ProjectProps = {
+  socials: social[];
 };
 
 const fetchProject = async (id: string) => {
