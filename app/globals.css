@@ -4,6 +4,7 @@
 
 * {
   cursor: none;
+  scroll-behavior: smooth;
 }
 body {
   background-color: #151515;

@@ -2,10 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { about, image } from "../../types";
+import { aboutQuery } from "../../utils/queries";
+import { urlFor } from "../../sanity";
 
-type Props = {};
+type Props = {
+  about: about[];
+};
 
-const About = (props: Props) => {
+const About = ({ about }: Props) => {
   return (
     <motion.div
       initial={{
@@ -26,19 +31,12 @@ const About = (props: Props) => {
         <h1 className="text-3xl">ABOUT</h1>
         <Image
           className="rounded-3xl  object-cover object-top"
-          src="/picture.jpeg"
+          src={urlFor(about[0]?.image).url()}
           alt="stole"
           height={200}
           width={200}
         />
-        <p className="text-justify px-10 text-m">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, eum
-          necessitatibus aut animi aliquam velit architecto voluptas deserunt ea
-          voluptate officiis. Vel deleniti harum nam sit voluptates. Quae
-          aspernatur, molestias sunt nesciunt perspiciatis iusto laborum
-          pariatur cupiditate repellendus nostrum veniam, soluta assumenda
-          perferendis nihil, maxime eos impedit iste dolor aut deserunt! Totam
-        </p>
+        <p className="text-justify px-10 text-m">{about[0]?.description}</p>
       </div>
     </motion.div>
   );

@@ -1,0 +1,20 @@
+export default {
+  name: "about",
+  title: "About",
+  type: "document",
+  fields: [
+    {
+      name: "description",
+      title: "Description",
+      type: "string",
+    },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+  ],
+};

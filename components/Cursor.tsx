@@ -14,7 +14,6 @@ export default function Cursor() {
         x: event.clientX,
         y: event.clientY,
       });
-      console.log(cursor);
     };
     window.addEventListener("mousemove", handleWindowMouseMove);
 
