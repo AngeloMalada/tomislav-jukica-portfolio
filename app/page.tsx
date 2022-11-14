@@ -4,8 +4,8 @@ import MainContent from "../components/MainContent";
 import Three from "../components/Three";
 import store from "../redux/store";
 import { Provider } from "react-redux";
-import About from "./about/page";
-import Contact from "./contact/page";
+import About from "../components/About";
+import Contact from "../components/Contact";
 import ProjectComponent from "../components/ProjectComponent";
 import {
   aboutQuery,

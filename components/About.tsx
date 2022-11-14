@@ -2,14 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { about, image } from "../../types";
-import { aboutQuery } from "../../utils/queries";
-import { urlFor } from "../../sanity";
+import { about, image } from "../types";
+import { aboutQuery } from "../utils/queries";
+import { urlFor } from "../sanity";
 
 type Props = {
   about: about[];
 };
-
 const About = ({ about }: Props) => {
   return (
     <motion.div
